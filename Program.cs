@@ -7,9 +7,11 @@ namespace User_Input_Assignment
     {
         static void Main(string[] args)
         {
-            
+
             //Part1();
-            Part2();   
+            //Part2();
+            //Part3();
+            Part4();
         }
 
         public static void Part1()
@@ -29,9 +31,9 @@ namespace User_Input_Assignment
             double.TryParse(Console.ReadLine(), out moneyMade);
             Console.WriteLine("WOW! " + moneyMade.ToString("C") + " I hope thats per hour and not per year!");
 
-            
+
         }
-        public static void Part2() 
+        public static void Part2()
         {
             string firstName;
             string lastName;
@@ -39,6 +41,7 @@ namespace User_Input_Assignment
             int studentId;
             string studentLogin;
             double studentAverage;
+            int id;
             Console.WriteLine("Please enter the following information");
             Console.Write("First name: ");
             Console.Write("");
@@ -58,11 +61,51 @@ namespace User_Input_Assignment
             Console.Write("Average: ");
             Console.Write("");
             double.TryParse(Console.ReadLine(), out studentAverage);
-
-
-
+            Console.WriteLine("Your information:");
+            Console.WriteLine("\tID: \t\t" + studentId);
+            Console.WriteLine("\tLogin: \t\t" + studentLogin);
+            Console.WriteLine("\tName: \t\t" + lastName + (", ") + firstName);
+            Console.WriteLine("\tGrade: \t\t" + grade);
+            Console.WriteLine("\tAverage: \t" + studentAverage);
 
 
         }
-    } 
+        public static void Part3()
+        {
+            string firstName;
+            int age;
+            Console.Write("Hello what is your name? ");
+            Console.Write(" ");
+            firstName = Console.ReadLine();
+            Console.WriteLine("");
+            Console.Write("Hey " + firstName + ("! How old are you?"));
+            Console.Write(" ");
+            int.TryParse(Console.ReadLine(), out age);
+            Console.WriteLine("");
+            Console.WriteLine("Did you know in five years you will be " + (age + 5) + (" years old? And five years ago you were ") + (age - 5) + (" years old?"));
+
+
+        }
+        public static void Part4()
+        {
+            double numberOne;
+            double numberTwo;
+            double numberThree;
+            Console.Write("Hello friend! will you give me three numbers?");
+            Console.WriteLine("");
+            Console.Write("Number one: ");
+            Console.Write("");
+            double.TryParse(Console.ReadLine(), out numberOne);
+            Console.Write("Number two: ");
+            Console.Write("");
+            double.TryParse(Console.ReadLine(), out numberTwo);
+            Console.Write("Number three: ");
+            Console.Write("");
+            double.TryParse(Console.ReadLine(), out numberThree);
+
+
+        }
+    }   
+
+        
 }
