@@ -11,7 +11,8 @@ namespace User_Input_Assignment
             //Part1();
             //Part2();
             //Part3();
-            Part4();
+            //Part4();
+            Part5();
         }
 
         public static void Part1()
@@ -91,6 +92,7 @@ namespace User_Input_Assignment
             double numberOne;
             double numberTwo;
             double numberThree;
+            double numbersTotal;
             Console.Write("Hello friend! will you give me three numbers?");
             Console.WriteLine("");
             Console.Write("Number one: ");
@@ -102,7 +104,67 @@ namespace User_Input_Assignment
             Console.Write("Number three: ");
             Console.Write("");
             double.TryParse(Console.ReadLine(), out numberThree);
+            Console.Write("");
+            numbersTotal = (numberOne + numberTwo + numberThree) / 2 ;
+            Console.WriteLine("Cool! this is all those numbers added and divided by two: " + numbersTotal);
 
+
+
+        }
+        public static void Part5()
+        {
+            string itemOne;
+            double priceOne;
+            string itemTwo;
+            double priceTwo;
+            double total;
+            double discount;
+            double subtotal;
+            
+            
+            Console.WriteLine("Hey friend! would you share the names and prices of two items for me?");
+
+            Console.WriteLine("What is your first item?");
+            itemOne = Console.ReadLine();
+            Console.Write("How much did it cost? $");
+            double.TryParse(Console.ReadLine(), out priceOne);
+
+
+            Console.WriteLine("What is your second item?");
+            itemTwo = Console.ReadLine();
+            Console.Write("How much did it cost? $");
+            double.TryParse(Console.ReadLine(), out priceOne);
+
+
+            // Input done...Generate receipt
+
+            Console.WriteLine("Sales Reciept");
+            Console.Write("");
+            Console.Write("Item one: " + itemOne);
+            Console.Write("");
+            
+            Console.Write("Price: " + priceOne.ToString("C");
+            Console.Write("");
+            double.TryParse(Console.ReadLine(), out priceOne);
+            Console.Write("Item two: ");
+            Console.Write("");
+            itemTwo = Console.ReadLine();
+            Console.Write("Price: ");
+            double.TryParse(Console.ReadLine(), out priceTwo);
+            
+            Console.WriteLine("---------------------");
+            total = (priceOne + priceTwo);
+            Console.WriteLine("Total: " + total.ToString("C"));
+            discount = (total * 0.2);
+            Console.WriteLine("Discount (20%): " + discount.ToString("C"));
+            subtotal = (total - discount);
+            Console.WriteLine("Subtotal: " + subtotal.ToString("C")); 
+            
+
+
+
+
+           
 
         }
     }   
